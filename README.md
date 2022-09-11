@@ -2,6 +2,10 @@
 
 - Derisking Defi protocols for the normies
 
+## Dependencies
+- Solidity
+- Foundry
+
 ## Key functions
 - Add mapping 
 - Get mapping 
