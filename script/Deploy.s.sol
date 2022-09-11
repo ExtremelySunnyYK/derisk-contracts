@@ -8,9 +8,10 @@ import {DeriskStorage} from "src/DeriskStorage.sol";
 /// @notice A very simple deployment script
 contract Deploy is Script {
     /// @notice The main script entrypoint
-    /// @return DeriskStorage The deployed contract
+    /// @return deriskStorage The deployed contract
     function run() external returns (DeriskStorage deriskStorage) {
         vm.startBroadcast();
+        deriskStorage = new DeriskStorage();
         vm.stopBroadcast();
     }
 }

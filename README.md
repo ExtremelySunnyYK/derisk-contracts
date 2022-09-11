@@ -6,10 +6,6 @@
 - Solidity
 - Foundry
 
-## Key functions
-- Add mapping 
-- Get mapping 
-
 ## Development
 
 **Setup**
