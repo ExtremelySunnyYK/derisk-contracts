@@ -1,36 +1,10 @@
-<img align="right" width="150" height="150" top="100" src="./assets/readme.jpg">
+# Derisk Contract
 
-# femplate • [![ci](https://github.com/abigger87/femplate/actions/workflows/ci.yml/badge.svg)](https://github.com/abigger87/femplate/actions/workflows/ci.yml) ![license](https://img.shields.io/github/license/abigger87/femplate?label=license) ![solidity](https://img.shields.io/badge/solidity-^0.8.15-lightgrey)
+- Derisking Defi protocols for the normies
 
-A **Clean**, **Robust** Template for Foundry Projects.
-
-## Getting Started
-
-Click [`use this template`](https://github.com/abigger87/femplate/generate) to create a new repository with this repo as the initial state.
-
-Or, if your repo already exists, run:
-```sh
-forge init --template https://github.com/abigger87/femplate
-git submodule update --init --recursive
-forge install
-```
-
-Run `./utils/rename.sh` to rename all instances of `femplate` with the name of your project/repository.
-
-## Blueprint
-
-```ml
-lib
-├─ forge-std — https://github.com/foundry-rs/forge-std
-├─ solmate — https://github.com/Rari-Capital/solmate
-scripts
-├─ Deploy.s.sol — Simple Deployment Script
-src
-├─ Greeter — A Minimal Greeter Contract
-test
-└─ Greeter.t — Exhaustive Tests
-```
-
+## Key functions
+- Add mapping 
+- Get mapping 
 
 ## Development
 
