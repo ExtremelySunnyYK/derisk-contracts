@@ -17,31 +17,27 @@ contract DeriskStorageTest is Test {
     // Test create protocol
     function testCreateProtocol() external {
         derisk.addProtocol("Aave", "ipfs://QmZ1");
-        Assert.equal(
-            derisk.data("Aave"),
-            "ipfs://QmZ1",
-            "Protocol should be created"
-        );
+        assertEq(derisk.data("Aave"), "ipfs://QmZ1");
     }
 
     // Test Create Duplicate Protocol should fail
     function testCannotCreateDuplicateProtocol() external {
         derisk.addProtocol("Aave", "ipfs://QmZ1");
-        Assert.equal(
+        assertEq(
             derisk.data("Aave"),
             "ipfs://QmZ1",
             "Protocol should be created"
         );
-        derisk.addProtocol("Aave", "ipfs://QmZ2");
         // Assert Fails
-        vm.expectRever(bytes("Protocol already exists"));
+        vm.expectRevert(bytes("Protocol already exists"));
+        derisk.addProtocol("Aave", "ipfs://QmZ2");
     }
 
     // Test update protocol
     function testUpdateProtocol() external {
         derisk.addProtocol("Aave", "ipfs://QmZ1");
         derisk.updateProtocol("Aave", "ipfs://QmZ2");
-        Assert.equal(
+        assertEq(
             derisk.data("Aave"),
             "ipfs://QmZ2",
             "Protocol should be updated"
@@ -52,6 +48,6 @@ contract DeriskStorageTest is Test {
     function testDeleteProtocol() external {
         derisk.addProtocol("Aave", "ipfs://QmZ1");
         derisk.deleteProtocol("Aave");
-        Assert.equal(derisk.data("Aave"), "", "Protocol should be deleted");
+        assertEq(derisk.data("Aave"), "", "Protocol should be deleted");
     }
 }

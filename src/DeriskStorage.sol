@@ -41,4 +41,14 @@ contract DeriskStorage is Ownable {
     {
         delete data[_protocol];
     }
+
+    // Get the IPFS link for a protocol
+    function getProtocol(string memory _protocol)
+        public
+        view
+        protocolExists(_protocol)
+        returns (string memory)
+    {
+        return data[_protocol];
+    }
 }
