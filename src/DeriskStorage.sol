@@ -9,10 +9,6 @@ contract DeriskStorage is Ownable {
     // Mapping of protocol to IPFS link
     mapping(string => string) public data;
 
-    constructor(string memory newGreeting) {
-        owner = msg.sender;
-    }
-
     modifier protocolExists(string memory _protocol) {
         require(bytes(data[_protocol]).length > 0, "Protocol does not exist");
         _;
